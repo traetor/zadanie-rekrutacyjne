@@ -19,13 +19,12 @@ button{
   background-color: $color-dark;
   color: $color-white;
   font-size: 16px;
+  line-height: 26px;
   //@include respond-to('l') {
   //  padding: 8px 12px;
   //}
   &:hover {
-    background-color: $color-gold;
-    color: $color-accent;
-    border-color: $color-gold;
+    opacity: .7;
   }
   &-primary {
     position: relative;

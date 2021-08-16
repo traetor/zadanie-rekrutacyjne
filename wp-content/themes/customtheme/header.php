@@ -19,8 +19,10 @@ defined('ABSPATH') or die();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- main.css -->
-    <link rel="stylesheet" href="https://sachinchoolur.github.io/lightGallery/lightgallery/css/lightgallery.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/front/build/assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!--    <link rel="icon" href="-->
@@ -45,7 +47,7 @@ defined('ABSPATH') or die();
             }?>
         </a>
         <p><?php wp_title(); ?></p>
-        <a href="#" class="btn btn-primary">Zobacz Testimonials</a>
+        <a href="#" class="btn btn-primary"><?= apply_filters('the_title', get_post_field('post_title', 19)); ?></a>
     </div>
 </header>
 

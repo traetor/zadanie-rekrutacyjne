@@ -2,14 +2,6 @@ import './helpers/polyfill';
 import { sierotki } from './helpers/sierotki';
 // Sliders
 import { bannerSlider } from "./components/sliders/bannerSlider";
-import { newsSlider } from "./components/sliders/newsSlider";
-import { clientsSlider } from "./components/sliders/clientsSlider";
-import { fixitOperationsSlider } from "./components/sliders/fixitOperationsSlider";
-import { caseStudiesSlider } from "./components/sliders/caseStudiesSlider";
-import { productsSlider } from "./components/sliders/productsSlider";
-import { historySlider } from "./components/sliders/historySlider";
-import { gallerySlider } from "./components/sliders/gallerySlider";
-import { aboutSlider } from "./components/sliders/aboutSlider";
 // Fixed header
 import { fixHeader } from "./components/fixHeader";
 // Validate forms
@@ -58,7 +50,8 @@ const App = (() => {
 })();
 
 // Banner slider
-if(document.querySelector('.banner__slider')) {
+console.log(document.querySelector('.opinions__slider'))
+if(document.querySelector('.opinions__slider')) {
  App.bannerSlider();
 }
 // Fixed header

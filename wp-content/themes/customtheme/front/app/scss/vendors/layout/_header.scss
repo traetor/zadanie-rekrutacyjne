@@ -3,12 +3,24 @@
 // -----------------------------------------------------------------------------
 
 header {
-  position: fixed;
   width: 100%;
   transition: $transition-base;
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 25px 15px;
+    position: relative;
+    .brand {
+      position: absolute;
+      left: 0;
+    }
+    .btn {
+      position: absolute;
+      right: 0;
+    }
+    p {
+      line-height: 60px;
+    }
   }
 }

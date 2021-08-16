@@ -3,9 +3,9 @@ import {tns} from "../../libs/tinySlider/tinySlider";
 
 function bannerSlider() {
     tns({
-        container: '.banner__slider',
+        container: '.opinions__slider',
         loop: true,
-        items: 1,
+        items: 2,
         nav: true,
         speed: 1000,
         autoplay: true,
