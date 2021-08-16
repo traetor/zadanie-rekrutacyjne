@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+.article, .contact, .job-offer, .client, .press-office, .shareholders, .customer-experience {
+  &-page {
+    .header__wrapper {
+      background-color: rgba(20, 20, 20, 1);
+      @include respond-to('s') {
+        background-color: rgba(41, 44, 47, 1);
+      }
+    }
+  }
+}
+
+// Tiny sldier styles tns nav
+.tns-outer {
+  & > {
+    .tns-nav {
+      display: flex !important;
+    }
+  }
+}
+.tns-nav {
+  pointer-events: none;
+  justify-content: center;
+  padding: 40px 0;
+    button {
+      pointer-events: auto;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: #e1e1e1;
+      cursor: pointer;
+      transition: $transition-base;
+      &:hover {
+        background-color: #b8b8b8;
+      }
+      &.tns-nav-active {
+        background-color: #b8b8b8;
+      }
+      & + button {
+        margin-left: 5px;
+      }
+    }
+}
+
+.case-studies, .case-single {
+  &-page {
+    .column {
+      &--small-photo {
+        background-size: auto;
+        height: auto;
+        position: relative;
+        @include respond-to('s') {
+          display: none;
+        }
+        span {
+          display: inline-block;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 156px;
+          height: 156px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        svg {
+          .st0 {
+            fill: #9a3533;
+          }
+        }
+      }
+    }
+  }
+}
+
+.static-entry {
+  .column {
+    &--info {
+      .section-title {
+        text-align: center;
+      }
+    }
+    &__description {
+      // Zdjęcie, które jest dodawane z edytora, ukrywane na desktopie, a pokazywane dopiero na wersjach mobilnych
+      p, figure {
+        margin: 0;
+        img {
+          display: none;
+          @include respond-to('m') {
+            display: block;
+            margin: 19px auto;
+          }
+        }
+      }
+    }
+  }
+}

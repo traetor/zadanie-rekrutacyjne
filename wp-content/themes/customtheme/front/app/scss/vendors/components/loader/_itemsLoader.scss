@@ -1,0 +1,26 @@
+.container-for-loader {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: -30px;
+    // top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+    border-top: 1px solid #000;
+    transition: .3s;
+
+    &.is-active {
+        // left: 50%;
+        bottom: 0;
+    }
+
+    .load-container {
+        position: relative;
+
+        .spinner {
+            margin: 0px auto;
+            height: 25px;
+        }
+    }
+}

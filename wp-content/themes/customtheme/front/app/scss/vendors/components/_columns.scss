@@ -1,0 +1,143 @@
+.columns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+}
+.column {
+  flex: 1;
+  &--bg {
+    background-color: #f6f6f6;
+    height: 345px;
+  }
+  &--photo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 842px;
+    max-width: 502px;
+    width: 100%;
+    order: 0;
+  }
+  &--desktop {
+    @include respond-to('m') {
+      display: none;
+    }
+  }
+  &--mobile {
+    display: none;
+    @include respond-to('m') {
+      display: block;
+      height: 450px;
+      margin: 20px auto;
+    }
+  }
+  &--medium-photo {
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    min-height: 720px;
+    max-width: 502px;
+    width: 100%;
+  }
+  &--small-photo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 310px;
+    max-width: 502px;
+    width: 100%;
+  }
+  &--info {
+    padding: 11px 10px 0 70px;
+    @include respond-to('m') {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &--order {
+    padding: 0 70px 0 0;
+    order: -1;
+  }
+  &__description {
+    padding-top: 65px;
+    @include respond-to('xl') {
+      padding-top: 38px;
+    }
+    @include respond-to('s') {
+      display: flex;
+      flex-direction: column;
+    }
+    h3 {
+      padding-bottom: 20px;
+    }
+    p {
+      line-height: 18px;
+      margin: 19px 0 70px;
+      @include respond-to('xl') {
+       margin-bottom: 40px;
+      }
+      @include respond-to('m') {
+        line-height: 14px
+      }
+    }
+    a {
+      @include respond-to('s') {
+        align-self: center;
+      }
+    }
+    &--lists {
+      ul {
+        margin-bottom: 30px;
+        list-style: none;
+        li {
+          position: relative;
+          font-size: 14px;
+          line-height: 17px;
+          @include respond-to('s') {
+            font-size: 11px;
+            line-height: 12px;
+          }
+          //&:first-child {
+          //  padding-bottom: 15px;
+          //  &::before {
+          //    display: none;
+          //  }
+          //}
+          &::before {
+            content: '-';
+            position: absolute;
+            top: 0;
+            left: -15px;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+    &--center {
+      @include respond-to('s') {
+        text-align: center;
+      }
+    }
+  }
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    width: 100%;
+    @include respond-to('m') {
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+
+    }
+    .btn {
+      margin-top: 20px;
+      @include respond-to('m') {
+        width: 100%;
+      }
+    }
+  }
+}

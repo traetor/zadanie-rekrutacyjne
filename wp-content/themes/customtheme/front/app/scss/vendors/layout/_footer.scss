@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  background-color: $color-accent;
+  &__content {
+    width: 100%;
+    @include respond-to('s') {}
+  }
+  &__items {
+    display: flex;
+    @include respond-to('s') {
+      flex-direction: column;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+}

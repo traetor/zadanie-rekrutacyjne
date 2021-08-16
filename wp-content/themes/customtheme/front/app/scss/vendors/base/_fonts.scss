@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: Libertinus Serif;
+  src: url(../fonts/LibertinusSerif-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Libertinus Serif;
+  src: url(../fonts/LibertinusSerif-Semibold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Libertinus Serif;
+  src: url(../fonts/LibertinusSerif-Bold.otf);
+  font-weight: 700;
+}

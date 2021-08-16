@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  width: 1625px;
+  max-width: 85%; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 15px; /* 3 */
+  padding-right: 15px; /* 3 */
+  position: relative;
+  @include respond-to('xl') {
+    max-width: 1029px;
+  }
+  @include respond-to('l') {
+    max-width: 892px;
+  }
+  @include respond-to('m') {
+    max-width: 720px;
+  }
+  @include respond-to('s') {
+    max-width: 540px;
+  }
+  @include respond-to('xs') {
+    max-width: 100%;
+  }
+  &-large {
+    max-width: 1830px; /* 1 */
+    margin-left: auto; /* 2 */
+    margin-right: auto; /* 2 */
+    padding-left: 15px; /* 3 */
+    padding-right: 15px; /* 3 */
+    @include respond-to('s') {
+      max-width: 720px;
+    }
+    @include respond-to('xs') {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+.red-text {
+  color: #95383a;
+}
+.gray-text {
+  color: $color-light-gray;
+}
+.error {
+  color: #95383a;
+  font-size: 12px;
+  font-weight: 500;
+}

@@ -1,0 +1,11 @@
+.section-title {
+  position: relative;
+  h1, h2 {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 49px;
+    @include respond-to('m') {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+}

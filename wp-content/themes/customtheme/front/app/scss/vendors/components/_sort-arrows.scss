@@ -1,0 +1,22 @@
+.sort-arrows {
+  display: block;
+
+  .sort-arrow {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+
+    &:hover {
+      opacity: .4;
+    }
+
+    svg {
+      width: 12px;
+    }
+  }
+
+  .sort-up {
+    transform: rotate(180deg);
+    margin-bottom: 7px;
+  }
+}

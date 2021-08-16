@@ -1,0 +1,38 @@
+.checkbox {
+  width: 80%;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 30px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-top: 7px;
+  color: #6C6C6C;
+  opacity: 1;
+  font-size: 14px;
+  line-height: 19px;
+  min-height: 22px;
+  background-size: 16px;
+  position: relative;
+
+  @media screen and (max-width:768px){
+    width: 100%;
+  }
+
+  &__kontakt {
+    width: 100%;
+
+    p {
+      color: $color-gold;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+.hidden__checkbox {
+  opacity: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+}

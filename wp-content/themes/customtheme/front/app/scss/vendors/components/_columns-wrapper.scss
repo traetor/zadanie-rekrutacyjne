@@ -1,0 +1,33 @@
+.columns-wrapper {
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    position: relative;
+    padding: 115px 0 115px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, #f2f2f2, rgba(242, 242, 242, 0.9), rgba(242, 242, 242, 0.4), rgba(242, 242, 242, 0));
+    }
+    &:nth-child(even) {
+      .column {
+        &--small-photo, &--medium-photo {
+          order: 1;
+        }
+        &--info {
+          order: 0;
+          padding: 0 63px 0 0;
+          @include respond-to('s') {
+            padding: 0 25px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

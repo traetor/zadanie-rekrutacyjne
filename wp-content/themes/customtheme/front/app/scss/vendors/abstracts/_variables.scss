@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Copy text color
+$text-color: #1A1C40 !default;
+
+/// Copy light color
+$color-white: rgba(255, 255, 255, 1) !default;
+
+/// Copy light-gray color
+$color-light-gray: rgba(127, 127, 127, 1) !default;
+
+/// Copy gray color
+$color-gray: rgba(140, 151, 162, 1) !default;
+
+/// Copy dark-gray color
+$color-dark-gray: rgba(41, 44, 47, 1) !default;
+
+/// Color accent
+$color-accent: #ECECF9 !default;
+//$color-accent-dark: rgba(12, 88, 73, 1) !default;
+
+/// Color dark
+$color-dark: #3F3A78 !default;
+
+/// Color gold
+$color-gold: rgba(215, 201, 168, 1) !default;
+//$color-gold-dark: rgba(215, 201, 168, 1) !default;
+
+/// Transition base
+$transition-base: 0.3s ease-in-out !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+    'xxl' : 1500px,
+    'xl': 1315px,
+    'l': 1200px,
+    'm': 992px,
+    's': 768px,
+    'xs': 576px,
+) !default;

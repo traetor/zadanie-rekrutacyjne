@@ -1,0 +1,167 @@
+.form {
+  &-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: -10px;
+    margin-left: -10px;
+    @include respond-to('s') {
+      flex-direction: column;
+      margin: 0;
+    }
+    & > div {
+      width: calc((100% / 2) - 15px);
+      @include respond-to('s') {
+        width: 100%;
+      }
+    }
+    & + .form-columns {
+      .form-column {
+        @include respond-to('s') {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+  &-group {
+    width: 100%;
+    position: relative;
+    & + .form-group {
+      margin-top: 15px;
+    }
+    input:focus ~ label, input:valid ~ label, form:focus ~ label, textarea:focus ~ label, textarea:valid ~ label {
+      top: -4px;
+      left: 15px;
+      font-size: 8px;
+      color: $color-dark-gray;
+    }
+    &--select {
+      @include respond-to('s') {
+        margin-bottom: 35px;
+        margin-top: 27px;
+      }
+    }
+  }
+  &-label {
+    color: rgb(182, 182, 182);
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    font-weight: 400;
+    top: 9px;
+    left: 10px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  &-control {
+    width: 100%;
+    border: 1px solid $color-gold;
+    border-radius: 3px;
+    background-color: $color-accent;
+    padding: 5px;
+    color: rgb(182, 182, 182);
+    &.error {
+      border-color: #95383a;
+    }
+    &[type=number]::-webkit-inner-spin-button,
+    &[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &--select {
+      color: rgb(182, 182, 182);
+      text-transform: uppercase;
+      font-size: 14px;
+      appearance: none;
+      background-image: url("../images/icons/icon-arrow-down.png");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      cursor: pointer;
+    }
+    &[type="number"] {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &--message {
+      resize: none;
+    }
+  }
+  p {
+    color: rgb(138, 137, 137);
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include respond-to('m') {
+      flex-direction: column;
+    }
+    .btn {
+      @include respond-to('s') {
+        padding: 8px 10px;
+      }
+    }
+    .hidden {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+  }
+  &__info {
+    border-bottom: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+    margin: 58px 0 34px;
+    padding: 57px 0;
+    height: 305px;
+    overflow: hidden;
+    transition: $transition-base;
+    @include respond-to('xl') {
+      height: 350px;
+    }
+    @include respond-to('m') {
+      height: 400px;
+    }
+    @include respond-to('s') {
+      height: 420px;
+    }
+    @include respond-to('xs') {
+      height: 600px;
+    }
+    @media (max-width: 320px) {
+      height: 686px;
+    }
+    &.show-more-text {
+      height: 100%;
+      overflow: unset;
+      .toggle-text {
+        display: block;
+        pointer-events: all;
+      }
+      .btn-toggle {
+        pointer-events: none;
+      }
+    }
+    @include respond-to('s') {
+      padding: 27px 0;
+    }
+    p {
+      margin: 0;
+      font-size: 10px;
+      line-height: 12px;
+    }
+    .btn-toggle {
+      cursor: pointer;
+      color: inherit;
+      transition: $transition-base;
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  .toggle-text {
+    pointer-events: none;
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+.box {
+  &--bg {
+    background-color: #f6f6f6;
+    .btn-primary {
+      margin-top: 20px;
+      @include respond-to('s') {
+        min-width: 160px;
+      }
+    }
+    .box__content {
+      padding-bottom: 70px;
+    }
+  }
+  &--practices {
+    .box__content {
+      padding-bottom: 0;
+    }
+    .short-info--padding {
+      .short-info__content {
+        p {
+          margin-top: 0;
+        }
+        .gray-text {
+          margin-top: 19px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .job-offer__icons {
+      p {
+        font-size: 14px;
+      }
+    }
+    .offer__item {
+      &--date-add {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        p {
+          margin: 0;
+          font-size: 14px;
+          line-height: 16px;
+          color: $color-gray;
+          @include respond-to('s') {
+           display: none;
+          }
+        }
+        .btn {
+          margin-top: 0;
+          margin-left: 30px;
+          @include respond-to('s') {
+            margin-left: 0px;
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    padding-bottom: 139px;
+    display: flex;
+    flex-direction: column;
+    @include respond-to('s') {
+      padding-bottom: 80px;
+    }
+    .btn-primary {
+      align-self: center;
+    }
+  }
+  &__wrapper {
+    padding: 105px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    @include respond-to('m') {
+      flex-direction: column;
+    }
+  }
+  p {
+    text-align: center;
+    margin: 59px 0 0;
+    font-size: 18px;
+    line-height: 22px;
+    @include respond-to('s') {
+      font-size: 11px;
+      line-height: 14px;
+      margin: 19px 0 0;
+    }
+    a {
+      border-bottom: 1px solid $text-color;
+      &:hover {
+        border-color: $color-accent;
+      }
+    }
+  }
+}

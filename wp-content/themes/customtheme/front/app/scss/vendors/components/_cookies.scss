@@ -1,0 +1,86 @@
+#cookies-message {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 1px solid #d3d0d0;
+  text-align: left;
+  position: fixed;
+  padding-left: 270px;
+  bottom: 0;
+  background-color: #efefef;
+  width: 100%;
+  z-index: 999;
+  white-space: pre-wrap;
+  background-color: #FFF;
+  height: 75px;
+  border-top: 1px solid $color-accent;
+
+  @media screen and (max-width:1500px){
+    padding-left: 250px;
+    padding-right: 230px;
+    white-space: inherit;
+    font-size: 13px;
+  }
+
+  @media screen and (max-width:1024px){
+    padding: 15px;
+    padding-left: 110px;
+    //padding-right: 80px;
+  }
+
+  @media screen and (max-width:500px){
+    height: 70px;
+    font-size: 9px;
+    line-height: 13px;
+    padding: 5px;
+    padding-left: 85px;
+  }
+
+  .policy {
+    display: contents;
+    color: #0093e9;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+}
+
+#accept-cookies-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/cookiesbox.svg");
+  color: #FFF;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  left: 0;
+  font-size: 25px;
+  position: fixed;
+  height: 75px;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 210px;
+  text-align: center;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  @media screen and (max-width:1024px){
+    width: 100px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width:500px){
+    height: 70px;
+    width: 80px;
+  }
+}
